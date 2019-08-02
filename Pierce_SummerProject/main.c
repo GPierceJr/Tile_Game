@@ -393,6 +393,10 @@ void GameState_FSM(Graphics_Context *g_sContext_p){
     case GameOver: {
         static bool eraser = false;
 
+        //CODE TO PLAY A JINGLE ON THE GAME OVER SCREEN
+
+        /*
+
         static bool playSong = true;
         if(playSong){
             if(!PlaySong_nonblocking(gameOver_song)){
@@ -400,11 +404,13 @@ void GameState_FSM(Graphics_Context *g_sContext_p){
             }
         }
 
+        */
+
         int i = 0;
         if(changeScreen){
-            DisplayGameOverScreen(g_sContext_p, gameScore);
+            DisplayGameOverScreen(g_sContext_p, gameScore); //USES IMAGEREFORMER
             changeScreen = false;
-            playSong = true;
+            //playSong = true;
 
             if(gameScore > highScores[0]){
                 highScores[0] = gameScore;
